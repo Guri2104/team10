@@ -11,7 +11,7 @@ body, html{
 .bg-image{
     /* The image used */
     background-image: url(screenbg.jpg);
-
+    
     /* Add the blur effect */
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -44,6 +44,8 @@ body, html{
     float: left;
     margin-top: 80px;
     margin-right: 700px;
+    color: darkgreen;
+    font-size: 26pt
 }
 .navbar a {
     float: left;
