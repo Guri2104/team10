@@ -1,2 +1,2 @@
 # team10
-Sprint 1 - home page(index.html), About page(page3.html)
+Sprint 1 - home page, About page
