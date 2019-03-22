@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Examples: Image Zoom With Parallax & Tilt Effects</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<style>
+body p img{max-width:100%;height:auto}
+.container { margin:150px auto; max-width:640px;}
+.myCSSclass {
+    background-color: rgba(244, 154, 26,.5);
+    color: white;
+    padding: 3em;
+}
+</style>
+</head>
+
+<body>
+  <div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/zoom/Image-Zoom-Parallax-Tilt-Parazoom.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container">
+  <h1>Examples: Image Zoom With Parallax & Tilt Effects</h1>
+  <h2>Basic</h2>
+  <p><img src="example.jpg" alt="jQueryScript.Net"></p>
+  <h2>Parallax Alt Text</h2>
+  <p><img src="example.jpg" alt="jQueryScript.Net" data-prz-text="true"></p>
+  <h2>Parallax Tilt Effect</h2>
+  <p><img src="example.jpg" alt="jQueryScript.Net" data-prz-tilt="true"
+        data-prz-overflow="visible"
+        data-prz-tilt-x-amount="30"
+        data-prz-tilt-y-amount="20"
+        data-prz-overflow="visible"></p>
+  <h2>Custom Cursor</h2>
+  <p><img src="example.jpg" alt="jQueryScript.Net" data-prz-custom-cursor-icon="maximize.svg"
+        data-prz-custom-cursor-size="100px"></p>
+   <h2>Custom Alt Text</h2>
+   <p><img src="example.jpg" alt="jQueryScript.Net" data-prz-text="true"
+        data-prz-text-position="bottom"
+        data-prz-text-alignment="right"
+        data-prz-text-class="myCSSclass"
+        data-prz-text-content="jQueryScript.Net"
+        data-prz-text-x-parallax="30"
+        data-prz-text-y-parallax="30"
+        data-prz-text-opacity="0.3"
+        data-prz-text-opacity-hover="1"
+        data-prz-overflow="visible"></p>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="dist/parazoom.min.js"></script>
+<script>
+  jQuery('img').parazoom();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
