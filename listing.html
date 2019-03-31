@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HOME GREENER</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAjgUkTCr14qNlesqqG_wA361kZmmFvKoc",
+            authDomain: "mango-7112f.firebaseapp.com",
+            databaseURL: "https://mango-7112f.firebaseio.com",
+            projectId: "mango-7112f",
+            storageBucket: "mango-7112f.appspot.com",
+            messagingSenderId: "488570969462"
+          };
+          firebase.initializeApp(config);
+        </script>
+    </head>
+    <body>
+
+
+        
+        <div class="navbar">
+            <a href="home.html"><img src="./team10/logo.png" alt="HomeGreen"></a>
+            <h1>GREENER HOUSING SOLUTIONS</h1>
+        </div>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Picture</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><img src="fluoro.jpg" alt="flo"/></th>
+              <td>Flourecent</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="fluoro.jpg" alt="flo"/></th>
+              <td>Halogen</td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="fluoro.jpg" alt="flo"/></th>
+              <td>CPL</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="inputform">
+            <form id="lightingForm">
+                How many do you use?<br>
+                <input type="number" id="bulb" placeholder="Enter Number">
+                <br>
+                How long do you have them on?<br>
+                <input type="number" id="hour" placeholder="Enter Hours">
+                <br>
+                <input type="submit" value="Submit" id="submit-btn">
+            </form>
+            <p id="totalLightbulbs">hold value</p>
+        </div>
+        
+        <div id="energy-ctn">
+            <h2>You Use:</h2>
+            <p id="energyUse">here</p>
+            <div id="alt-btn">ALTERNATE LIGHTS</div>
+        </div>
+        
+        
+        
+        
+        <script>
+            var db = firebase.database();
+            var dbRef = firebase.database().ref("lightbulbs/");
+            dbRef.on("value", function(snapshot) {
+//                console.log(snapshot.val());
+                var totalBulbs = snapshot.val();
+                var totalBulbsVal = parseInt(totalBulbs);
+                $("#totalLightbulbs").html(totalBulbs);
+                updateTotalBulbs(totalBulbsVal);
+            });
+            
+            function updateTotalBulbs(totalBulbsVal){
+                $("#submit-btn").on("click", function(e){
+                    e.preventDefault();
+                    var bulbs = $("#bulb").val();
+                    var bulbsVal = parseInt(bulbs);
+//                    console.log(bulbsVal + holdVal);
+                    dbRef.set(bulbsVal + totalBulbsVal);
+                    calculateEnergy(bulbsVal);
+                });
+            }
+            
+            function calculateEnergy(bulbsVal){
+                var lightbulbs = bulbsVal;
+                var hours = $("#hour").val();
+                var energy = lightbulbs * hours * 10;
+                $("#energyUse").html(energy);
+            }
+            
+        </script>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
