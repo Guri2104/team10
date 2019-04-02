@@ -4,50 +4,82 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.navbar{
+/*    background-color: orange;*/
+    border-bottom: 1px solid grey;
+    height: 130px;
+}
+
 .navbar img{
     float: left;
     width: 130px;
     height: 130px;
+/*    display: inline-block;*/
+/*    background-color: grey;*/
 }
 
-.navbar{
-/*    position: absolute;*/
-    top: 8px;
-    left: 16px;
-    right: 16px;
-    width: 100%;
-    border-bottom: 1px solid grey;
-}
-
-.navbar h1{
+#titleName{
     float: left;
-    margin-top: 80px;
+    margin: 0;
+/*    display: inline-block;*/
+/*    float: left;*/
+    margin-top: 76px;
     color: darkolivegreen;
     font-size: 35pt;
-}
-
-.table{
-    float: left;
-    margin-top: 50px;
-    margin-left: 50px;
-/*    margin-right: 300px;*/
-    width: 40%;
 /*    background-color: blue;*/
 }
 
-#inputform{
-    margin: 100px;
+#counter > p{
+    margin-top: 76px;
+    float: right;
+    font-size: 30pt;
+}
+
+#totalLightbulbs{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+table{
+/*    margin: 50px;*/
+    box-sizing: border-box;
+    float: left;
+    font-family: arial, sans-serif;
+/*    border: 1px solid black;*/
+    border-collapse: collapse;
+    width: 50%;
+/*    display: inline-block;*/
 /*    background-color: red;*/
 }
 
-#energy-ctn{
-/*    display: inline-block;*/
-/*    background-color: green;*/
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+#inputform{
+    text-align: center;
+    display: inline-block;
     width: 50%;
-    float: right;
+    height: 400px;
+    float: left;
+/*    background-color: green;*/
+}
+
+#lightingForm{
+    margin-top: 150px;
+}
+#energy-ctn{
+    text-align: center;
+/*    background-color: yellow;*/
+    width: 50%;
+    height: 400px;
+    float: left;;
 }
 
 #alt-btn{
+    margin: 0 auto;
+    display: block;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
