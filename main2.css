@@ -4,6 +4,7 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*
 .navbar img{
     float: left;
     width: 130px;
@@ -32,13 +33,54 @@ body, html{
     margin-top: 80px;
     display: inline-block;
     color: darkolivegreen;
-    font-size: 35pt
+    font-size: 45pt
+}
+*/
+
+.navbar{
+    position:   fixed;
+    top: 0px;
+     padding-left: 16px;
+   width: 100%;
+    border-bottom: 1px solid grey;
+                background-color: white;
+    z-index: 3
+}
+
+.navbar img{
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.navbar h1{
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    color: darkgreen;
+    font-size: 30pt
+}
+ul{
+    list-style-type: none
+}
+ul .active {
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 4px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-right: 20px;
+    display: inline;
+    
 }
 
 #a{
     margin: 20px;
-    margin-top: 185px;
-    height: 500px;
+    margin-top: 150px;
+    height: 450px;
     background-color:whitesmoke
    
 }
@@ -54,12 +96,12 @@ body, html{
 #i1{
     float: right;
     height: 400px;
-    margin: 50px;
+    margin: 25px;
     
 }
 
 #h1{
-    font-size: 50px;
+    font-size: 40pt;
     font-weight: bold;
 }
 
@@ -196,7 +238,7 @@ body, html{
 .more{
     color: black;
     text-decoration: none;
-    border: 3px solid grey;
+    border: 3px solid green;
     padding: 3px;
     border-radius: 8px;
 }
