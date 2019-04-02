@@ -1,48 +1,110 @@
 body, html{
+
     height: 100%;
+
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
+
 }
+
+
 
 *{
+
     box-sizing: border-box;
+
 }
+
+
 
 .bg-image{
+
     /* The image used */
+
     background-image: url(screenbg.jpg);
+
     
+
     /* Add the blur effect */
+<<<<<<< HEAD
     filter: blur(0px);
     -webkit-filter: blur(0px);
+=======
+
+    filter: blur(8px);
+
+    -webkit-filter: blur(8px);
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
+
+
 
     /* Full height */
+
     height: 100%; 
 
+
+
     /* Center and scale the image nicely */
+
     background-position: center;
+
     background-repeat: no-repeat;
+
     background-size: cover;
+
     
+
 }
 
+
+
 .navbar{
+<<<<<<< HEAD
     position:   fixed;
     top: 0px;
      padding-left: 16px;
    width: 100%;
     border-bottom: 1px solid grey;
                 background-color: white
+=======
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 16px;
+
+    
+
+    border-bottom: 1px solid grey;
+
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
 }
+
+
 
 .navbar img{
+
     float: left;
+<<<<<<< HEAD
     width: 60px;
     height: 60px;
+=======
+
+    width: 130px;
+
+    height: 130px;
+
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
 }
 
+
+
 .navbar h1{
+
     float: left;
+<<<<<<< HEAD
     margin-top: 25px;
     margin-bottom: 10px;
     margin-right: 100px;
@@ -54,8 +116,27 @@ ul{
 }
 ul .active {
     float: right;
+=======
+
+    margin-top: 80px;
+
+    margin-right: 700px;
+
+    color: darkgreen;
+
+    font-size: 26pt
+
+}
+
+.navbar a {
+
+    float: left;
+
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
     color: #000000;
+
     text-align: center;
+<<<<<<< HEAD
     padding: 4px 15px;
     text-decoration: none;
     font-size: 16px;
@@ -63,51 +144,113 @@ ul .active {
     margin-right: 20px;
     display: inline;
     
+=======
+
+    padding: 14px 10px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    margin-top: 75px;
+
+/*    margin-left: 00px;*/
+
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
 }
+
 /* Position text in the middle of the page/image */
 
+
+
 .btn-container{
+
     position: absolute;
+
     top: 50%;
+
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     z-index: 2;
+
     text-align: center;
+
     width: 60%;
+
     margin: auto;
+
 }
+
+
 
 .btn{
+
     background-color: rgb(0,0,0); /* Fallback color */
+<<<<<<< HEAD
     background-color: rgba(0,0,0, 0.2); /* Black w/opacity/see-through */
+=======
+
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
     color: white;
+
     font-weight: bold;
+
     border: 3px solid #f1f1f1;
+
     border-radius: 25px;
+
     z-index: 2;
+
     padding: 20px;
+
     width: 400px;
+
     font-size: 20pt;
+
 }
+
+
 
 .btn#greener{
+
     float: right;
+
 }
+
+
 
 .btn#affordable{
+
     float: left;
+
 }
 
+
+
 .footer a {
+
     float: left;
+
     color: #000000;
+
     text-align: center;
+
     
+
     text-decoration: none;
+
     font-size: 24px;
+
     margin-top: 10px;
+
     padding: 14px 
+
 /*    margin-left: 00px;*/
+<<<<<<< HEAD
 }
 
  
@@ -142,3 +285,7 @@ ul .active {
                 font-size: 17pt
             }
     
+=======
+
+}
+>>>>>>> 178012f0bb4da45990a2272470a4c22c9efcac40
