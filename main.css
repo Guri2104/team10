@@ -91,7 +91,6 @@ ul{
 ul .active {
     float: right;
     color: #000000;
-
     text-align: center;
     padding: 4px 15px;
     text-decoration: none;
@@ -104,6 +103,9 @@ ul .active {
 /* Position text in the middle of the page/image */
 
 
+ul .active:hover{
+    font-weight: bolder;
+}
 
 .btn-container{
 
@@ -213,11 +215,13 @@ ul .active {
                 float: right;
                 margin-right: 80px;
                 padding: 30px;
-                border-radius: 15px
+                border-radius: 15px;
+                font-family: 'Forum', cursive;
             }
             
             span{
+                font-family: 'Baloo Bhaijaan', cursive;
                 font-weight: bolder;
-                font-size: 17pt
+                font-size: 22pt
             }
     

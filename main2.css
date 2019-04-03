@@ -77,6 +77,10 @@ ul .active {
     
 }
 
+ul .active:hover{
+    font-weight: bolder;
+}
+
 #a{
     margin: 20px;
     margin-top: 150px;
