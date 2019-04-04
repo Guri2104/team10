@@ -3,63 +3,81 @@
     <head>
         <title>HOME GREENER</title>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Chivo|Gloria+Hallelujah" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="main2.css">
         <style>
             
             
-            #soln{
-                margin: 20px;
-                margin-top: 185px;
+             #soln{
+                width: 95%;
+                height: 170px;
+                margin: 20px auto 0;
+                margin-top: 150px;
                 padding: 20px;
+                padding-top: 150px;
                 text-align: center;
-                font-size: 25pt;
+                font-size: 35pt;
                 line-height: 0.0em;
-                background-color:cadetblue
+                background-image: url('bgwsh.jpg');
+                color: white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                font-family: 'Chivo', sans-serif
             }
             
-            #soln span{
-                background: white;
-                padding: 19px 10px;
+            
+            
+           #content{
+                width: 100%;
+                margin: -60px auto;
+                
             }
             
-            #content{
+             #about{
                 width: 60%;
-                margin: 30px;
-                float: left
-            }
-            
-            #about{
-                width: 81.4%;
-                margin: 30px auto;
+                margin: 0 auto;
+                text-align: center;
                 font-size: 18pt;
                 line-height: 1.4em;
-                color: rosybrown
+                padding: 20px;
+                padding-top: 70px;
+                background-color: white;
+                height: 1150px;
+                border: 1px solid grey
             }
+           
             
             .idea{
-                margin-top: 35px;
+                margin-top: 90px;
+                margin-left: 25px;
+                width: 60%;
                 padding: 10pt;
                 height: auto;
                 background-color: whitesmoke
             }
             
             .heading{
-                font-size: 24pt;
-                color: saddlebrown
+                font-size: 26pt;
+                color: saddlebrown;
+                font-weight: bolder
             }
             
             .info{
                 font-size: 13pt;
-                color: gray;
+                color: darkslategrey;
                 font-size: 15pt;
                 line-height: 1.4em;
+                font-family: 'Forum', cursive;
+                line-height: 1.5em
                 
             }
             
             
             .eewimg{
                 width: 90%;
-                margin-bottom: 80px;
+                margin-bottom: 150px;
                 height: 530px
                 
             }
@@ -68,7 +86,7 @@
                 float: right;
                 margin-right: 30px;  
                 margin-left: 0;
-                margin-top: 65px;
+                margin-top: 0px;
                 width: 30%
             }
             
@@ -103,6 +121,20 @@
   width: 100%;
   border: 0;
   }
+             #im{
+                float: none;
+                padding-left: 0px;
+                margin-bottom: 10px;
+                height: 600px;
+                width: 500px
+                
+            }
+            
+             #t1{
+                margin: 60px;
+                font-family: 'Forum', cursive;
+                font-weight: bold
+            }
     
 }
         </style>
@@ -111,8 +143,11 @@
         
         <div class="navbar">
             <a href="home.html"><img src="logo.png" alt="HomeGreen"></a>
-            <a href="greensol.html"><h1>GREENER HOUSING SOLUTIONS</h1></a>
-            
+            <a href="home.html"><h1>HOMEGREENER</h1></a>
+          <ul><li><a class="active" href="About.html">ABOUT US</a></li>
+                <li><a class="active" href="greensol.html" style="text-decoration: underline">GREENER HOUSING </a></li>
+                    <li><a class="active" href="page1.html">AFFORDABLE HOUSING</a></li>
+            </ul>   
         </div>
         
         <div id="soln">
@@ -120,9 +155,10 @@
         <span>ENERGY EFFICIENT WINDOWS</span>
         </div>
         
-        
+        <div id="content">
             <div id="about">
-                An energy efficient window is one that helps to minimise the use of artificial heating and cooling in a building. Technological progress in the last 25 years has made it possible to design windows which insulate against heat and cold up to four times better than conventional windows. Windows are made up of various components such as the glass, frame and hardware all acting together to provide a certain level of performance. Those components that provide substantial protection from heat gain and heat loss and reduce the energy consumed by the whole building are considered energy efficient.
+                <img src="bgeew.jpg" id="im" ><br>
+                <p id="t1">An energy efficient window is one that helps to minimise the use of artificial heating and cooling in a building. Technological progress in the last 25 years has made it possible to design windows which insulate against heat and cold up to four times better than conventional windows. Windows are made up of various components such as the glass, frame and hardware all acting together to provide a certain level of performance. Those components that provide substantial protection from heat gain and heat loss and reduce the energy consumed by the whole building are considered energy efficient.</p>
             </div>
         <div id="box">
             <div id="images">
@@ -143,8 +179,7 @@
             <li><img src="eew1.jpg" class="eewimg"></li>
             <li><img src="eew2.jpg" class="eewimg"></li>
                 </ul>
-                </div>
-        <div id="content">    
+                </div>   
             <div class="idea">
                 
                 
@@ -201,6 +236,7 @@
             </div>
         </div>
         </div>
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="responsiveslides.min.js"></script>
         
