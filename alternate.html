@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAjgUkTCr14qNlesqqG_wA361kZmmFvKoc",
+    authDomain: "mango-7112f.firebaseapp.com",
+    databaseURL: "https://mango-7112f.firebaseio.com",
+    projectId: "mango-7112f",
+    storageBucket: "mango-7112f.appspot.com",
+    messagingSenderId: "488570969462"
+  };
+  firebase.initializeApp(config);
+</script>
+    </head>
+
+    <style>
+        body, html{
+background-image: url("");
+    height: 100%;
+            
+
+
+
+    /* Full height */
+
+    height: 100%; 
+
+
+
+    /* Center and scale the image nicely */
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+*{
+
+    box-sizing: border-box;
+
+}
+
+
+    .navbar{
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 16px;
+
+    
+
+    border-bottom: 1px solid grey;
+
+}
+
+
+
+.navbar img{
+
+    float: left;
+
+    width: 130px;
+
+    height: 130px;
+
+}
+
+
+
+.navbar h1{
+
+    float: left;
+
+    margin-top: 80px;
+
+    margin-right: 700px;
+
+    color: darkgreen;
+
+    font-size: 26pt
+
+}
+
+.navbar a {
+
+    float: left;
+
+    color: #000000;
+
+    text-align: center;
+
+    padding: 14px 10px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    margin-top: 75px;
+
+/*    margin-left: 00px;*/
+
+}
+               a:link {
+  text-decoration: none;
+}
+        a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+ 
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+a:active {
+  text-decoration: underline;
+}
+        .div4{
+            height: 100px;
+            width: 100%;
+            transform: translate(0px,150px);
+            border-bottom: 1px solid black;
+        }
+        .div4 h1{
+            font-size: 40pt;
+            font-family: monospace;
+            font-stretch: expanded;
+            text-align: left;
+            padding-left: 100px;
+            color: green;
+        }
+        .div1{
+            background-image: url("BULB2.jpg");
+             background-size: cover;
+            transform: translate(100px,250px);
+    
+            height: 300px;
+            width: 250px;
+            float: left;
+            border: 1px solid black;
+           
+        }
+        .div1 h1{
+            text-align: center;
+           background-color: black;
+            font-family: cursive;
+            
+            font-size: 20pt;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .div10{
+           
+            transform: translate(0px,230px);
+            padding-left: 500px;
+        }
+        .txtarea{
+            transform: translate(300px,0px);
+        }
+        #energySave1{
+            margin-top: 110px;
+            margin-left: 430px;
+            font-size: 15px;
+            transform: translate(-150px,-100px);
+        }
+        #energySave{
+            margin-left: 430px;
+            font-size: 15px;
+            transform: translate(-150px,-170px);
+        }
+        .div2{
+            background-image: url("sensor.jpg");
+             background-size: cover;
+
+    
+            height: 300px;
+            width: 250px;
+            float: left;
+            border: 1px solid black;
+        transform: translate(-150px,580px);
+        }
+        .div2 h1{
+            text-align: center;
+           background-color: black;
+            font-family: cursive;
+            
+            font-size: 20pt;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .bigdiv2{
+            height: 200px;
+            
+            width: 100%;
+            transform: translate(0px,500px);
+        }
+        .txtarea1{
+            transform: translate(300px,700px);
+        }
+        #energySave3{
+            transform: translate(270px,250px);
+        }
+        .locate{
+            transform: translate(280px,200px)
+        }
+        .total{
+            transform: translate(200px,600px);
+        }
+        #totalsavings{
+            transform: translate(200px,500px);
+        }
+        #ttl{
+            transform: translate(250px,500px);
+        }
+    </style>
+<body>
+    <div class="navbar">
+
+            <img src="logo.png" alt="HomeGreen">
+
+            <h1>HOMEGREENER</h1>
+        
+
+           <a class="active" href="home.html">HOME</a>
+
+            <a href="About.html">ABOUT</a>
+
+            <a href="">CONTACT US</a>
+           
+
+        </div>
+    <div class="div4"><h1 id="shit">ALTERNATE SOLUTIONS (LIGHTING)</h1></div>
+    <div  class="div1" > <h1>LED lighting</h1></div>
+    
+     <div class="div2"><h1>Sensor Lighting</h1></div>
+    <form class="txtarea1">
+                How many of the bulbs do you want to replace by Sensor bulbs?<br>
+        <input type="number" id="inputuser1" placeholder="Enter Number"></form>
+    <br><button onclick="buttonclick1()" id="submit-btn1" class="txtarea1">Submit</button>
+        
+    <div class="div10"><form class="txtarea">
+                How many of the bulbs do u want to replace by LED bulbs?<br>
+        <input type="number" id="inputuser" placeholder="Enter Number"></form>
+        <br><button onclick="buttonclick()" id="submit-btn" class="txtarea">Submit</button><br>
+        <button onclick="buttonclick3()" class="total">Total Savings</button>
+        <p id="energySave1"><b>Your Savings per month:</b></p>
+        <p id="energySave3"><b>Your Savings per month:</b></p>
+        <p id = "totalsavings">Total savings : </p>
+        <p id = "ttl"></p>
+    <p id ="energySave"></p>
+        <p id="energySave4" class="locate"></p>
+</div>
+        
+    <script>
+         var inputuser = document.getElementById("inputuser");
+                var btn = document.getElementById("submit-btn");
+        var enterednumber = inputuser.value;
+        var inputuser1 = document.getElementById("inputuser1");
+        var enterednumber1 = inputuser1.value;
+         var btn1 = document.getElementById("submit-btn1");
+         var savings;
+        var one;
+        var savings1;
+        var two;
+        var three;
+        
+         
+        function buttonclick(one){
+            var enterednumber = inputuser.value;
+    var firebaseref = firebase.database().ref();
+            firebaseref.child("led").set(enterednumber);
+            var enterednumberval = parseInt(enterednumber);
+            console.log(enterednumberval);
+           
+        
+            
+        
+                    var db = firebase.database();
+            var dbRef = firebase.database().ref("/lighting/hours/");
+            dbRef.on("value", function(snapshot) {
+               console.log(snapshot.val());
+                var hours = snapshot.val();
+                var hours = parseInt(hours);
+//                $("#hours").html(hours);
+//                updateTotalBulbs(hours);
+               // console.log(hours);
+                 savings = hours*enterednumberval*30*0.013; 
+               // console.log(savings);
+                $("#energySave").html("$ " + savings);
+             
+                
+            
+            });
+            
+        }
+        
+        function buttonclick1(){
+            var enterednumber1 = inputuser1.value;
+    var firebaseref1 = firebase.database().ref();
+            firebaseref1.child("sensor").set(enterednumber1);
+            var enterednumberval1 = parseInt(enterednumber1);
+            //console.log(enterednumberval1);
+             var dbRef1 = firebase.database().ref("/lighting/hours/");
+            dbRef1.on("value", function(snapshot1) {
+               console.log(snapshot1.val());
+                var hours1 = snapshot1.val();
+                var hours1 = parseInt(hours1);
+            
+            console.log(hours1);
+            
+             
+//                $("#hours").html(hours);
+//                updateTotalBulbs(hours);
+                //console.log(hours);
+                savings1 = hours1*enterednumberval1*30*0.010; 
+                console.log(savings1);
+                $("#energySave4").html("$ " + savings1);
+                
+                });
+        }
+            function buttonclick3(){
+               
+             buttonclick();
+                one = savings;
+                two = savings1;
+                 three = one+two;
+                $("#ttl").html("$ " + three);
+                
+            
+        }
+        
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        </body>
+</html>
