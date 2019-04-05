@@ -46,6 +46,7 @@ body, html{
     margin-left: 15px;
 }
 
+<<<<<<< HEAD
 #p2{
     margin-right: 25px
 }
@@ -57,13 +58,21 @@ body, html{
     font-size: 17pt;
     font-weight: bold;
     
+=======
+#table-container{
+/*    display: block;*/
+/*    background-color: blue;*/
+/*    text-align: center;*/
+/*    margin: 0 auto;*/
+>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
 }
 
 table{
-/*    margin: 50px;*/
+    margin: 0 auto;
+    text-align: center;
     box-sizing: border-box;
-    float: left;
     font-family: arial, sans-serif;
+<<<<<<< HEAD
 /*    border: 1px solid black;*/
     border-collapse: collapse;
     width: 45%;
@@ -71,12 +80,24 @@ table{
     margin-left: 50px;
 /*    display: inline-block;*/
     background-color: white;
+=======
+    margin-top: 120px;
+/*    background-color: red;*/
+>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
 }
 
-td, th {
-    border: 1px solid black;
+th {
     text-align: center;
-    padding: 8px;
+    padding: 50px;
+}
+
+th:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.clicked{
+    background-color: lightgreen;
 }
 
 th img{
@@ -118,8 +139,10 @@ th img{
 }
 
 #energy-ctn{
+    margin-top: 70px;
     text-align: center;
 /*    background-color: yellow;*/
+<<<<<<< HEAD
     width: 29%;
     height: 240px;
     float: left;
@@ -127,6 +150,11 @@ th img{
     padding-top: 10px;
     background-color: white;
     border: 1px solid grey
+=======
+    width: 50%;
+    height: 400px;
+    float: left;
+>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
 }
 
 #alt-btn{

@@ -34,6 +34,7 @@
                 <p>Saved:</p>
             </div>
         </div>
+<<<<<<< HEAD
          <h2 id="p1">Select the light bulb you use!</h2><br>
         <table>
           <thead>
@@ -71,50 +72,105 @@
                 <input type="submit" value="Submit" id="submit-btn">
             </form>
 <!--            <p id="totalLightbulbs">hold value</p>-->
+=======
+        <div id="table-container">
+            <table>
+              <thead>
+                <tr>
+                    <th id="incandescent"><img src="fluoro.jpg" alt="flo"/><br>Incandescent</th>
+                    <th id="halogen"><img src="fluoro.jpg" alt="flo"/><br>Halogen</th>
+                    <th id="cfl"><img src="fluoro.jpg" alt="flo"/><br>Compact Flourescent Light (CFL)</th>
+                </tr>
+              </thead>
+            </table>
+>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
         </div>
         
-        <div id="energy-ctn">
-            <h2>You Use:</h2>
-            <p>Energy Used</p>
-            <p id="energyUse">here</p>
-            <div id="alt-btn">ALTERNATE LIGHTS</div>
+        <div id="botHalf">
+            <div id="inputform">
+                <form id="lightingForm">
+                    How many do you use?<br>
+                    <input type="number" id="bulb" placeholder="Enter Number">
+                    <br>
+                    How long do you have them on?<br>
+                    <input type="number" id="hour" placeholder="Enter Hours">
+                    <br>
+                    <input type="submit" value="Submit" id="submit-btn">
+                </form>
+            </div>
+        
+            <div id="energy-ctn">
+                <h2>Lighting Energy Cost Estimate:</h2>
+                <p>Total kWh per Month:</p>
+                <p id="energyUse"></p>
+                <p>Cost per Month:</p>
+                <p id="energyCost"></p>
+                <div id="alt-btn">ALTERNATE LIGHTS</div>
+            </div>
         </div>
         
         
         
         
         <script>
-            var db = firebase.database();
-            var dbRef = firebase.database().ref("lighting/");
-            var refBulbs = dbRef.child("lightbulbs");
-            var refHours = dbRef.child("hours");
-            refBulbs.on("value", function(snapshot) {
-                var totalBulbs = snapshot.val();
-                var totalBulbsVal = parseInt(totalBulbs);
-                $("#totalLightbulbs").html(totalBulbs);
-                updateLighting(totalBulbsVal);
-            });
-            
-            function updateLighting(totalBulbsVal){
-                $("#submit-btn").on("click", function(e){
-                    e.preventDefault();
-                    var bulbs = $("#bulb").val();
-                    var bulbsVal = parseInt(bulbs);
-                    var hour = $("#hour").val();
-                    var hours = parseInt(hour);
-                    console.log(hours);
-                    refBulbs.set(bulbsVal + totalBulbsVal);
-                    refHours.set(hours);
-                    calculateEnergy(bulbsVal);
+            $(document).ready(function(){
+                var watts = 0;
+                $("#incandescent").click(function(){
+                    $("#incandescent").addClass('clicked');
+                    $("#halogen").removeClass('clicked');
+                    $("#cfl").removeClass('clicked');
+                    watts = 60;
                 });
-            }
-            
-            function calculateEnergy(bulbsVal){
-                var lightbulbs = bulbsVal;
-                var hours = $("#hour").val();
-                var energy = lightbulbs * hours * 10;
-                $("#energyUse").html(energy);
-            }
+                
+                $("#halogen").click(function(){
+                    $("#halogen").addClass('clicked');
+                    $("#incandescent").removeClass('clicked');
+                    $("#cfl").removeClass('clicked');
+                    watts = 43;
+                });
+                
+                $("#cfl").click(function(){
+                    $("#cfl").addClass('clicked');
+                    $("#incandescent").removeClass('clicked');
+                    $("#halogen").removeClass('clicked');
+                    watts = 14;
+                });
+                
+
+                var db = firebase.database();
+                var dbRef = firebase.database().ref("lighting/");
+                var refBulbs = dbRef.child("lightbulbs");
+                var refHours = dbRef.child("hours");
+                refBulbs.on("value", function(snapshot) {
+                    var totalBulbs = snapshot.val();
+                    var totalBulbsVal = parseInt(totalBulbs);
+                    $("#totalLightbulbs").html(totalBulbs);
+                    updateLighting(totalBulbsVal);
+                });
+
+                function updateLighting(totalBulbsVal){
+                    $("#submit-btn").on("click", function(e){
+                        e.preventDefault();
+                        var bulbs = $("#bulb").val();
+                        var bulbsVal = parseInt(bulbs);
+                        var hour = $("#hour").val();
+                        var hours = parseInt(hour);
+                        console.log(hours);
+                        refBulbs.set(bulbsVal + totalBulbsVal);
+                        refHours.set(hours);
+                        calculateEnergy(bulbsVal);
+                    });
+                }
+
+                function calculateEnergy(bulbsVal){
+                    var lightbulbs = bulbsVal;
+                    var hours = $("#hour").val();
+                    var energy = watts * lightbulbs * hours / 1000;
+                    var cost = energy * 0.12;
+                    $("#energyUse").html(energy + " kwH");
+                    $("#energyCost").html("$" + cost.toFixed(2));
+                }
+            });
             
         </script>
 
