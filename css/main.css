@@ -22,7 +22,7 @@ body, html{
 
     /* The image used */
 
-    background-image: url(screenbg.jpg);
+    background-image: url(../images/screenbg.jpg);
 
     
 
@@ -195,7 +195,7 @@ ul .active:hover{
     #b{
         padding-top: 150px;
         height: 680px;
-        background-image: url(t10.jpg);
+        background-image: url(../images/t10.jpg);
         z-index: -2;
         font-size: 15pt;
         /* Add the blur effect *

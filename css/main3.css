@@ -46,7 +46,13 @@ body, html{
     margin-left: 15px;
 }
 
-<<<<<<< HEAD
+.bulbs{
+    width: 250px;
+    height: 250px
+}
+
+/*<<<<<<< HEAD*/
+/*
 #p2{
     margin-right: 25px
 }
@@ -58,13 +64,14 @@ body, html{
     font-size: 17pt;
     font-weight: bold;
     
-=======
+*/
+/*=======*/
 #table-container{
 /*    display: block;*/
 /*    background-color: blue;*/
 /*    text-align: center;*/
 /*    margin: 0 auto;*/
->>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
+/*>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6*/
 }
 
 table{
@@ -72,18 +79,20 @@ table{
     text-align: center;
     box-sizing: border-box;
     font-family: arial, sans-serif;
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 /*    border: 1px solid black;*/
+/*
     border-collapse: collapse;
     width: 45%;
     
-    margin-left: 50px;
+*/
+/*    margin-left: 50px;*/
 /*    display: inline-block;*/
-    background-color: white;
-=======
+/*    background-color: white;*/
+/*=======*/
     margin-top: 120px;
 /*    background-color: red;*/
->>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
+/*>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6*/
 }
 
 th {
@@ -110,7 +119,7 @@ th img{
 }
 
 #inputform{
-     margin-top: 0px;
+     margin-top: 30px;
     text-align: center;
     display: inline-block;
     width: 50%;
@@ -139,10 +148,11 @@ th img{
 }
 
 #energy-ctn{
-    margin-top: 70px;
+    margin-top: 40px;
     text-align: center;
 /*    background-color: yellow;*/
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
+/*
     width: 29%;
     height: 240px;
     float: left;
@@ -150,11 +160,12 @@ th img{
     padding-top: 10px;
     background-color: white;
     border: 1px solid grey
-=======
+*/
+/*=======*/
     width: 50%;
     height: 400px;
     float: left;
->>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6
+/*>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6*/
 }
 
 #alt-btn{
