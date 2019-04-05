@@ -44,23 +44,35 @@ body, html{
     margin-right: 15px;
     margin-left: 15px;
 }
+
+#table-container{
+/*    display: block;*/
+/*    background-color: blue;*/
+/*    text-align: center;*/
+/*    margin: 0 auto;*/
+}
+
 table{
-/*    margin: 50px;*/
+    margin: 0 auto;
+    text-align: center;
     box-sizing: border-box;
-    float: left;
     font-family: arial, sans-serif;
-/*    border: 1px solid black;*/
-    border-collapse: collapse;
-    width: 50%;
-    margin-top: 120px
-/*    display: inline-block;*/
+    margin-top: 120px;
 /*    background-color: red;*/
 }
 
-td, th {
-    border: 1px solid black;
+th {
     text-align: center;
-    padding: 8px;
+    padding: 50px;
+}
+
+th:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.clicked{
+    background-color: lightgreen;
 }
 
 #inputform{
@@ -76,11 +88,12 @@ td, th {
     margin-top: 150px;
 }
 #energy-ctn{
+    margin-top: 70px;
     text-align: center;
 /*    background-color: yellow;*/
     width: 50%;
     height: 400px;
-    float: left;;
+    float: left;
 }
 
 #alt-btn{
