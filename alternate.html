@@ -4,6 +4,8 @@
 <meta charset="utf-8">
     
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -131,6 +133,10 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+        
+        .clicked{
+            outline: 2px solid lightgreen;
+        }
         .div4{
             height: 100px;
             width: 100%;
@@ -145,7 +151,7 @@ a:active {
             padding-left: 100px;
             color: green;
         }
-        .div1{
+        #ledimage{
             background-image: url("./images/BULB2.jpg");
              background-size: cover;
             transform: translate(100px,250px);
@@ -156,7 +162,18 @@ a:active {
             border: 1px solid black;
            
         }
-        .div1 h1{
+        #ledimage:hover{
+            outline: 2px solid green;
+            cursor: pointer;
+        }
+        #sensorimage:hover{
+            outline: 2px solid green;
+            cursor: pointer;
+        }
+
+
+
+        #ledimage h1{
             text-align: center;
            background-color: black;
             font-family: cursive;
@@ -167,25 +184,28 @@ a:active {
             
         }
         .div10{
-           
-            transform: translate(0px,230px);
-            padding-left: 500px;
+/*            background-color: red;*/
+/*            display: inline-block;*/
+            display: none;
+            margin-top: 500px;
         }
         .txtarea{
             transform: translate(300px,0px);
         }
         #energySave1{
             margin-top: 110px;
-            margin-left: 430px;
+            margin-left: 440px;
             font-size: 15px;
             transform: translate(-150px,-100px);
         }
         #energySave{
-            margin-left: 430px;
+            margin-left: 440px;
+            margin-top: 85px;
             font-size: 15px;
             transform: translate(-150px,-170px);
         }
-        .div2{
+        #sensorimage{
+            margin-bottom: 100px;
             background-image: url("./images/sensor.jpg");
              background-size: cover;
 
@@ -196,7 +216,7 @@ a:active {
             border: 1px solid black;
         transform: translate(-150px,580px);
         }
-        .div2 h1{
+        #sensorimage h1{
             text-align: center;
            background-color: black;
             font-family: cursive;
@@ -212,11 +232,30 @@ a:active {
             width: 100%;
             transform: translate(0px,500px);
         }
+        
+        #sensordiv{
+/*            background-color: red;*/
+/*            display: inline-block;*/
+            display: none;
+            margin-top: 500px;
+            margin-left: 300px;
+        }
+/*
         .txtarea1{
             transform: translate(300px,700px);
         }
+*/
         #energySave3{
-            transform: translate(270px,250px);
+            margin-top: 110px;
+            margin-left: 140px;
+            font-size: 15px;
+            transform: translate(-150px,-100px);
+        }
+        #energySave4{
+/*            margin-top: 110px;*/
+            margin-left: 140px;
+            font-size: 15px;
+            transform: translate(-150px,-100px);
         }
         .locate{
             transform: translate(280px,200px)
@@ -248,28 +287,49 @@ a:active {
 
         </div>
     <div class="div4"><h1 id="shit">ALTERNATE SOLUTIONS (LIGHTING)</h1></div>
-    <div  class="div1" > <h1>LED lighting</h1></div>
+    <div id="ledimage"><h1>LED lighting</h1></div>
     
-     <div class="div2"><h1>Sensor Lighting</h1></div>
-    <form class="txtarea1">
-                How many of the bulbs do you want to replace by Sensor bulbs?<br>
-        <input type="number" id="inputuser1" placeholder="Enter Number"></form>
-    <br><button onclick="buttonclick1()" id="submit-btn1" class="txtarea1">Submit</button>
+     <div id="sensorimage"><h1>Sensor Lighting</h1></div>
+        <div id="sensordiv">
+            <form class="txtarea1">
+                    How many lightbulbs do you want to replace with sensor?<br>
+            <input type="number" id="inputuser1" placeholder="Enter Number"></form>
+        <br><button onclick="buttonclick1()" id="submit-btn1" class="txtarea1">Submit</button>
+            <p id="energySave3"><b>Your Savings per month:</b></p>
+            <p id="energySave4"></p>
+    </div>
         
     <div class="div10"><form class="txtarea">
-                How many of the bulbs do u want to replace by LED bulbs?<br>
+                How many lightbulbs do you want to replace with LED?<br>
         <input type="number" id="inputuser" placeholder="Enter Number"></form>
         <br><button onclick="buttonclick()" id="submit-btn" class="txtarea">Submit</button><br>
-        <button onclick="buttonclick3()" class="total">Total Savings</button>
+<!--        <button onclick="buttonclick3()" class="total">Total Savings</button>-->
         <p id="energySave1"><b>Your Savings per month:</b></p>
-        <p id="energySave3"><b>Your Savings per month:</b></p>
-        <p id = "totalsavings">Total savings : </p>
+<!--        <p id="energySave3"><b>Your Savings per month:</b></p>-->
+<!--        <p id = "totalsavings">Total savings : </p>-->
         <p id = "ttl"></p>
     <p id ="energySave"></p>
-        <p id="energySave4" class="locate"></p>
 </div>
         
     <script>
+        $(document).ready(function(){
+            $("#ledimage").click(function(){
+                console.log("clicked");
+                $("#ledimage").addClass('clicked');
+                $("#sensordiv").css("display", "none");
+                $(".div10").css("display", "inline-block");
+                $("#sensorimage").removeClass('clicked');
+            });
+
+            $("#sensorimage").click(function(){
+                $("#sensorimage").addClass('clicked');
+                $(".div10").css("display", "none");
+                $("#sensordiv").css("display", "inline-block");
+                $("#ledimage").removeClass('clicked');
+            });
+        });
+        
+        
          var inputuser = document.getElementById("inputuser");
                 var btn = document.getElementById("submit-btn");
         var enterednumber = inputuser.value;
@@ -346,7 +406,9 @@ a:active {
                 
             
         }
-        
+
+                
+
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
