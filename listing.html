@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
         <link rel="stylesheet" type="text/css" href="./css/main3.css">
+        <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
         <script>
@@ -27,21 +29,30 @@
         
         <div class="navbar">
             <a href="index.html"><img src="./images/logo.png" alt="HomeGreen"></a>
-            <h1 id="titleName">HOMEGREENER</h1>
-            <div id="counter">
-                <p id="p2">Lightbulbs</p>
+            <h1 id="titleName">HOMEGREENER</h1><ul><li><a class="active" href="About.html">ABOUT US</a></li>
+                <li><a class="active" href="greensol.html">GREENER HOUSING </a></li>
+                    <li><a class="active" href="listing.html" style="text-decoration: underline">AFFORDABLE HOUSING</a></li>
+            </ul>
+        </div>
+        
+        <div id="counter">
+                <p>We've helped saving</p>
                 <p id="totalLightbulbs"></p>
-                <p>Saved:</p>
-            </div>
+                <p id="p2">Light bulbs till date!</p>
+                
         </div>
         
         <div id="table-container">
+            <p>
+            
+                Select the light bulb you use:
+            </p>
             <table>
               <thead>
                 <tr>
-                    <th id="incandescent"><img src="./images/bulb.jpg" alt="flo" class="bulbs"/><br>Incandescent</th>
-                    <th id="halogen"><img src="./images/halogen.jpg" alt="flo" class="bulbs"/><br>Halogen</th>
-                    <th id="cfl"><img src="./images/cfl.jpg" alt="flo" class="bulbs"/><br>Compact Flourescent Light (CFL)</th>
+                    <th id="incandescent"><img src="./images/bulb.jpg" alt="flo" class="bulbs"/><br>INCANDESCENT</th>
+                    <th id="halogen"><br><br><br>   <img src="./images/halogen.jpg" alt="flo" class="bulbs" id="b2"/><br><br>HALOGEN</th>
+                    <th id="cfl"><br><br><br><img src="./images/cfl.jpg" alt="flo" class="bulbs" id="b3"/><br><br>COMPACT FLUORESCENT LIGHT</th>
                 </tr>
               </thead>
             </table>
@@ -64,14 +75,15 @@
             <div id="energy-ctn">
                 <div id="energyOutput">
                     <h2>Lighting Energy Cost Estimate:</h2>
-                    <p>Total kWh per Month:</p>
-                    <p id="energyUse"></p>
-                    <p>Cost per Month:</p>
-                    <p id="energyCost"></p>
+                    <p>Total kWh used per Month: </p>
+                    <p id="energyUse"></p><br><br>
+                    <p>Cost of usage per Month: </p>
+                    <p id="energyCost"></p><br><br>
                     <div id="alt-btn"><a href="alternate.html">ALTERNATE LIGHTING</a></div>
                 </div>
             </div>
         </div>
+            
         
         
         
@@ -138,6 +150,8 @@
             });
             
         </script>
+        
+        
 
 
 <!--
