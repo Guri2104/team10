@@ -30,51 +30,11 @@
             <h1 id="titleName">HOMEGREENER</h1>
             <div id="counter">
                 <p id="p2">Lightbulbs</p>
-                <p id="totalLightbulbs">hold value</p>
+                <p id="totalLightbulbs"></p>
                 <p>Saved:</p>
             </div>
         </div>
-<!--
-<<<<<<< HEAD
-         <h2 id="p1">Select the light bulb you use!</h2><br>
-        <table>
-          <thead>
-            <tr>
-              <th>Picture</th>
-              <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th><img id="i1" src="bulb.jpg" alt="flo"/></th>
-              <td>Incandescent</td>
-            </tr>
-            <tr>
-              <th><img id="i2" src="halogen.jpg" alt="flo"/></th>
-              <td>Halogen</td>
-            </tr>
-            <tr>
-              <th><img id="i3" src="cfl.jpg" alt="flo"/></th>
-              <td>CFL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div id="inputform">
-           
-            <form id="lightingForm">
-                
-                <label id="s1">How many do you use?</label><br>
-                <input type="number" id="bulb" placeholder="Enter Number">
-                <br>
-                How long do you have them on?<br>
-                <input type="number" id="hour" placeholder="Enter Hours">
-                <br>
-                <input type="submit" value="Submit" id="submit-btn">
-            </form>
-            <p id="totalLightbulbs">hold value</p>
--->
-<!--=======-->
+        
         <div id="table-container">
             <table>
               <thead>
@@ -102,12 +62,14 @@
             </div>
         
             <div id="energy-ctn">
-                <h2>Lighting Energy Cost Estimate:</h2>
-                <p>Total kWh per Month:</p>
-                <p id="energyUse"></p>
-                <p>Cost per Month:</p>
-                <p id="energyCost"></p>
-                <div id="alt-btn"><a href="alternate.html">ALTERNATE LIGHTS</a></div>
+                <div id="energyOutput">
+                    <h2>Lighting Energy Cost Estimate:</h2>
+                    <p>Total kWh per Month:</p>
+                    <p id="energyUse"></p>
+                    <p>Cost per Month:</p>
+                    <p id="energyCost"></p>
+                    <div id="alt-btn"><a href="alternate.html">ALTERNATE LIGHTING</a></div>
+                </div>
             </div>
         </div>
         
@@ -153,6 +115,7 @@
                 function updateLighting(totalBulbsVal){
                     $("#submit-btn").on("click", function(e){
                         e.preventDefault();
+                        $("#energy-ctn").css("display", "block");
                         var bulbs = $("#bulb").val();
                         var bulbsVal = parseInt(bulbs);
                         var hour = $("#hour").val();
