@@ -25,6 +25,26 @@ body, html{
 /*    background-color: grey;*/
 }
 
+ul{
+    list-style-type: none
+}
+ul .active {
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 4px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-right: 20px;
+    display: inline;
+    
+}
+
+ul .active:hover{
+    font-weight: bolder;
+}
+
 #titleName{
     float: left;
     margin-top: 25px;
@@ -34,21 +54,35 @@ body, html{
     font-size: 30pt
 }
 
+#counter{
+    height: 60px;
+    margin-top: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
 #counter > p{
-    margin-top: 30px;
-    margin-bottom: 0;
-    float: right;
-    font-size: 25pt;
+    display: inline;
+    font-size: 26pt;
+    letter-spacing: 0.06em;
+    
 }
 
 #totalLightbulbs{
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 12px;
+    margin-left: 12px;
+    color: green
 }
 
 .bulbs{
     width: 250px;
-    height: 250px
+    height: auto;
+    top: 0
+} 
+
+#b2, #b3{
+    width: 300px    
 }
 
 /*<<<<<<< HEAD*/
@@ -67,11 +101,19 @@ body, html{
 */
 /*=======*/
 #table-container{
-/*    display: block;*/
-/*    background-color: blue;*/
-/*    text-align: center;*/
-/*    margin: 0 auto;*/
-/*>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6*/
+    width: 80%;
+    padding-top: 20px;
+    margin: 0 auto;
+    background-color: white
+    
+}
+
+#table-container > p{
+    text-align: center;
+    font-size: 23pt;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: 'Share', cursive;
 }
 
 table{
@@ -79,34 +121,22 @@ table{
     text-align: center;
     box-sizing: border-box;
     font-family: arial, sans-serif;
-/*<<<<<<< HEAD*/
-/*    border: 1px solid black;*/
-/*
-    border-collapse: collapse;
-    width: 45%;
-    
-*/
-/*    margin-left: 50px;*/
-/*    display: inline-block;*/
-/*    background-color: white;*/
-/*=======*/
-    margin-top: 120px;
-/*    background-color: red;*/
-/*>>>>>>> 39041a96acce68c679de9c9a15d7598b4ca163d6*/
 }
 
 th {
     text-align: center;
-    padding: 50px;
+    padding: 30px; 
+    font-size: 14pt;
+    font-weight: bold
 }
 
 th:hover{
-    background-color: lightgreen;
+    background-color: gainsboro;
     cursor: pointer;
 }
 
 .clicked{
-    background-color: lightgreen;
+    background-color: gainsboro;
 }
 
 th img{
@@ -129,12 +159,13 @@ th img{
 }
 
 #lightingForm{
+    font-family: 'Source Serif Pro', serif;
     padding-top: 20px;
     width: 45%;
     font-size: 15pt;
     line-height: 1.3em;
     text-align: left;
-    margin-left: 44%;;
+    margin-left: 25%;;
     padding-left: 90px;
     background-color: white;
     border: 1px solid grey
@@ -152,24 +183,41 @@ th img{
     text-align: center;
     width: 50%;
     height: 400px;
-    float: left;
+    float: right;
+    font-family: 'Source Serif Pro', serif;
 }
 
 #energyOutput{
-    margin-right: 200px;
-    height: 250px;
+    padding-bottom: 30px;
+    margin-right: 25%;
+    margin-top: 30px;
+    height: 220px;
+    width: 70%;
+    float: right;
     font-size: 14pt;
+    background-color: white;
+    border: 1px solid grey
+}
+
+#energyOutput > p{
+    display: inline;
 }
 
 #alt-btn{
     margin: 0 auto;
     display: block;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
     color: white;
     font-weight: bold;
-    border: 3px solid #f1f1f1;
+    border: 3px solid ;
     border-radius: 25px;
     padding: 20px;
     width: 300px;
+    
+}
+
+#alt-btn > a{
+    color: black;
+    text-decoration: none
 }

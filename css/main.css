@@ -209,19 +209,20 @@ ul .active:hover{
         background-size: 100% 100%;
          background-size: cover;
     }
-            #box{
-                background-color: white;
-                display: inline-block;
-                float: right;
-                margin-right: 80px;
-                padding: 30px;
-                border-radius: 15px;
-                font-family: 'Forum', cursive;
-            }
-            
-            span{
-                font-family: 'Baloo Bhaijaan', cursive;
-                font-weight: bolder;
-                font-size: 22pt
-            }
+
+    #box{
+        background-color: white;
+        display: inline-block;
+        float: right;
+        margin-right: 80px;
+        padding: 30px;
+        border-radius: 15px;
+        font-family: 'Source Serif Pro', serif;
+    }
+    
+    span{
+        font-family: 'Abril Fatface', cursive;
+        font-weight: bolder;
+        font-size: 22pt
+    }
     

@@ -1,298 +1,250 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-    
-<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAjgUkTCr14qNlesqqG_wA361kZmmFvKoc",
-    authDomain: "mango-7112f.firebaseapp.com",
-    databaseURL: "https://mango-7112f.firebaseio.com",
-    projectId: "mango-7112f",
-    storageBucket: "mango-7112f.appspot.com",
-    messagingSenderId: "488570969462"
-  };
-  firebase.initializeApp(config);
-</script>
+        <script>
+      // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAjgUkTCr14qNlesqqG_wA361kZmmFvKoc",
+                authDomain: "mango-7112f.firebaseapp.com",
+                databaseURL: "https://mango-7112f.firebaseio.com",
+                projectId: "mango-7112f",
+                storageBucket: "mango-7112f.appspot.com",
+                messagingSenderId: "488570969462"
+            };
+            firebase.initializeApp(config);
+        </script>
+    
+
+        <style>
+            body, html{
+                background-image: url("");
+                height: 100%;
+                height: 100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            .navbar{
+                position:   fixed;
+                top: 0px;
+                padding-left: 16px;
+                width: 100%;
+                border-bottom: 1px solid grey;
+                background-color: white;
+                z-index: 3;
+
+            }
+
+            .navbar img{
+                float: left;
+                width: 60px;
+                height: 60px;
+            }
+
+
+
+                .navbar h1{
+
+                    float: left;
+
+                    margin-top: 25px;
+                    margin-bottom: 10px;
+                    margin-right: 100px;
+                    color: darkgreen;
+                    font-size: 30pt
+                }
+                ul{
+                    list-style-type: none
+                }
+                ul .active {
+                    float: right;
+                    color: #000000;
+                    text-align: center;
+                    padding: 4px 15px;
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin-top: 30px;
+                    margin-right: 20px;
+                    display: inline;
+                }
+
+        /* Position text in the middle of the page/image */
+
+
+                ul .active:hover{
+                    font-weight: bolder;
+                }   
+                #top{
+                     height: 60px;
+                    margin-top: 150px;
+                    text-align: center;
+                    font-size: 30pt;
+                    font-family: 'Share', cursive;
+                    letter-spacing: 0.07em
+                }
+
+                .clicked{
+                    outline: 2px solid lightgreen;
+                }
+
+                #images{
+                    width: 80%;
+                    margin: 20px auto;
+                    background-color: whitesmoke;
+                    height: 440px;
+                    padding-top: 50px
+                }
+
+                #ledimage{
+                    background-image: url("./images/led.jpeg");
+                     background-size: 100% 100%;
+                    margin-left: 250px;
+                    margin-right: 130px;
+                    height: 300px;
+                    width: 270px;
+                    float: left;
+                    border: 1px solid black;
+
+                }
+
+                #sensorimage{
+                    margin-bottom: 100px;
+                    background-image: url("./images/sensor.jpeg");
+                     background-size: 100% 100%;
+
+
+                    height: 300px;
+                    width: 270px;
+                    float: left;
+                    border: 1px solid black;
+                }
+
+                #ledimage:hover{
+                    outline: 2px solid green;
+                    cursor: pointer;
+                }
+                #sensorimage:hover{
+                    outline: 2px solid green;
+                    cursor: pointer;
+                }
+
+
+
+                #ledimage h1{
+                    text-align: center;
+                    margin-top: 320px;
+                    font-size: 20pt;
+                    text-decoration: none;
+
+                }
+                .div10{
+        /*            background-color: red;*/
+        /*            display: inline-block;*/
+                    display: none;
+                    margin: 100px;
+                    padding-left: 25%
+                }
+                #sensordiv{
+        /*            background-color: red;*/
+        /*            display: inline-block;*/
+                    display: none;
+                    margin: 100px;
+                    padding-left: 25%
+                }
+                .txtarea, .txtarea1{
+                    font-family: 'Source Serif Pro', serif;
+                }
+
+                .ques{
+                    font-size: 18pt;
+                    margin-bottom: 0
+                }
+
+                #inputuser1, #inputuser{
+                    font-size: 16pt
+                }
+
+                #submit-btn1, #submit-btn{
+                    font-size: 13pt;
+                    border-radius: 10px
+                }
+
+                #energySave1, #energySave3{
+                    margin-top: 140px;
+                    margin-left: 150px;
+                    font-size: 16pt;
+                    transform: translate(-150px,-100px);
+                }
+                #energySave,#energySave4{
+                    margin-left: 150px;
+                    margin-top: 85px;
+                    font-size: 15pt;
+                    transform: translate(-150px,-170px);
+                }
+
+                #sensorimage h1{
+                    text-align: center;
+                    margin-top: 320px;
+                    font-size: 20pt;
+                    text-decoration: none;
+
+                }
+                .bigdiv2{
+                    height: 200px;
+                    width: 100%;
+                }
+
+
+                .locate{
+                transform: translate(280px,200px)
+            }
+            .total{
+                transform: translate(200px,600px);
+            }
+            #totalsavings{
+                transform: translate(200px,500px);
+            }
+            #ttl{
+                transform: translate(250px,500px);
+            }
+
+            .green{
+                color: green
+            }
+        </style>
     </head>
-
-    <style>
-        body, html{
-background-image: url("");
-    height: 100%;
-            
-
-
-
-    /* Full height */
-
-    height: 100%; 
-
-
-
-    /* Center and scale the image nicely */
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    background-size: cover;
-
-    margin: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-
-
-*{
-
-    box-sizing: border-box;
-
-}
-
-
-    .navbar{
-
-    position: absolute;
-
-    top: 8px;
-
-    left: 16px;
-
-    
-
-    border-bottom: 1px solid grey;
-
-}
-
-
-
-.navbar img{
-
-    float: left;
-
-    width: 130px;
-
-    height: 130px;
-
-}
-
-
-
-.navbar h1{
-
-    float: left;
-
-    margin-top: 80px;
-
-    margin-right: 700px;
-
-    color: darkgreen;
-
-    font-size: 26pt
-
-}
-
-.navbar a {
-
-    float: left;
-
-    color: #000000;
-
-    text-align: center;
-
-    padding: 14px 10px;
-
-    text-decoration: none;
-
-    font-size: 20px;
-
-    margin-top: 75px;
-
-/*    margin-left: 00px;*/
-
-}
-               a:link {
-  text-decoration: none;
-}
-        a:visited {
-  text-decoration: none;
-}
-
-a:hover {
- 
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-}
-
-a:active {
-  text-decoration: underline;
-}
-        
-        .clicked{
-            outline: 2px solid lightgreen;
-        }
-        .div4{
-            height: 100px;
-            width: 100%;
-            transform: translate(0px,150px);
-            border-bottom: 1px solid black;
-        }
-        .div4 h1{
-            font-size: 40pt;
-            font-family: monospace;
-            font-stretch: expanded;
-            text-align: left;
-            padding-left: 100px;
-            color: green;
-        }
-        #ledimage{
-            background-image: url("./images/BULB2.jpg");
-             background-size: cover;
-            transform: translate(100px,250px);
-    
-            height: 300px;
-            width: 250px;
-            float: left;
-            border: 1px solid black;
-           
-        }
-        #ledimage:hover{
-            outline: 2px solid green;
-            cursor: pointer;
-        }
-        #sensorimage:hover{
-            outline: 2px solid green;
-            cursor: pointer;
-        }
-
-
-
-        #ledimage h1{
-            text-align: center;
-           background-color: black;
-            font-family: cursive;
-            
-            font-size: 20pt;
-            color: white;
-            text-decoration: none;
-            
-        }
-        .div10{
-/*            background-color: red;*/
-/*            display: inline-block;*/
-            display: none;
-            margin-top: 500px;
-        }
-        .txtarea{
-            transform: translate(300px,0px);
-        }
-        #energySave1{
-            margin-top: 110px;
-            margin-left: 440px;
-            font-size: 15px;
-            transform: translate(-150px,-100px);
-        }
-        #energySave{
-            margin-left: 440px;
-            margin-top: 85px;
-            font-size: 15px;
-            transform: translate(-150px,-170px);
-        }
-        #sensorimage{
-            margin-bottom: 100px;
-            background-image: url("./images/sensor.jpg");
-             background-size: cover;
-
-    
-            height: 300px;
-            width: 250px;
-            float: left;
-            border: 1px solid black;
-        transform: translate(-150px,580px);
-        }
-        #sensorimage h1{
-            text-align: center;
-           background-color: black;
-            font-family: cursive;
-            
-            font-size: 20pt;
-            color: white;
-            text-decoration: none;
-            
-        }
-        .bigdiv2{
-            height: 200px;
-            
-            width: 100%;
-            transform: translate(0px,500px);
-        }
-        
-        #sensordiv{
-/*            background-color: red;*/
-/*            display: inline-block;*/
-            display: none;
-            margin-top: 500px;
-            margin-left: 300px;
-        }
-/*
-        .txtarea1{
-            transform: translate(300px,700px);
-        }
-*/
-        #energySave3{
-            margin-top: 110px;
-            margin-left: 140px;
-            font-size: 15px;
-            transform: translate(-150px,-100px);
-        }
-        #energySave4{
-/*            margin-top: 110px;*/
-            margin-left: 140px;
-            font-size: 15px;
-            transform: translate(-150px,-100px);
-        }
-        .locate{
-            transform: translate(280px,200px)
-        }
-        .total{
-            transform: translate(200px,600px);
-        }
-        #totalsavings{
-            transform: translate(200px,500px);
-        }
-        #ttl{
-            transform: translate(250px,500px);
-        }
-    </style>
-<body>
-    <div class="navbar">
-
-            <img src="./images/logo.png" alt="HomeGreen">
-
-            <h1>HOMEGREENER</h1>
-        
-
-           <a class="active" href="home.html">HOME</a>
-
-            <a href="About.html">ABOUT</a>
-
-            <a href="">CONTACT US</a>
-           
-
+    <body>
+        <div class="navbar">
+            <a href="index.html"><img src="./images/logo.png" alt="HomeGreen"></a>
+            <h1 id="titleName">HOMEGREENER</h1><ul><li><a class="active" href="About.html">ABOUT US</a></li>
+                <li><a class="active" href="greensol.html">GREENER HOUSING </a></li>
+                    <li><a class="active" href="listing.html" style="text-decoration: underline">AFFORDABLE HOUSING</a></li>
+            </ul>
         </div>
-    <div class="div4"><h1 id="shit">ALTERNATE SOLUTIONS (LIGHTING)</h1></div>
-    <div id="ledimage"><h1>LED lighting</h1></div>
+   <div id="top">Select any alternate <span class="green">lighting</span> solution.</div>
     
-     <div id="sensorimage"><h1>Sensor Lighting</h1></div>
+        <div id="images">
+            <div id="ledimage"><h1>LED LIGHTS</h1></div>
+            <div id="sensorimage"><h1>SENSOR LIGHTS</h1></div>
+        </div>
         <div id="sensordiv">
             <form class="txtarea1">
-                    How many lightbulbs do you want to replace with sensor?<br>
+                    <p class="ques">How many lightbulbs do you want to replace with sensor?</p><br>
             <input type="number" id="inputuser1" placeholder="Enter Number"></form>
         <br><button onclick="buttonclick1()" id="submit-btn1" class="txtarea1">Submit</button>
             <p id="energySave3"><b>Your Savings per month:</b></p>
@@ -301,9 +253,13 @@ a:active {
         
     <div class="div10"><form class="txtarea">
 
+<<<<<<< HEAD
                 <br>
 
                 How many lightbulbs do you want to replace with LED?<br>
+=======
+                <p class="ques">How many lightbulbs do you want to replace with LED?</p><br>
+>>>>>>> deda7940ddb352d8fdf213c77f8f46f802c0a023
 
         <input type="number" id="inputuser" placeholder="Enter Number"></form>
         <br><button onclick="buttonclick()" id="submit-btn" class="txtarea">Submit</button><br>
