@@ -11,7 +11,7 @@ At Home Greener, we believe everyone deserves to have
 a safe and affordable place to live in.
 
 We help you to calculate your daily usage of various 
-resources and provides cost effective alternate solutions.
+resources and provides cost-effective alternate solutions.
 
 Keeping in mind the mother nature, we also suggest 
 some greener housing solutions to make you love the 
